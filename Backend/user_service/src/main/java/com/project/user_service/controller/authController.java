@@ -16,7 +16,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationServiceException;
 import org.springframework.web.bind.annotation.*;
-
+//
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -60,7 +60,7 @@ public class authController {
     @PostMapping(path="/signup")
     public ResponseEntity<ResponseStringDto> signUpRequest(@RequestBody @Valid SignupDto signupDto) {
         log.info("Received signup request for email: {}", signupDto.getEmail());
-        System.out.println("dsjkfsd");
+//        System.out.println("dsjkfsd");
        userService.signUpRequest(signupDto);
         log.debug("User registered successfully");
         String message = "User registered successfully";

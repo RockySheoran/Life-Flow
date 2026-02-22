@@ -51,8 +51,6 @@ public class WebSecurityConfig {
                         auth.requestMatchers(publicRoutes).permitAll()
                                 .requestMatchers("/auth/get-me").authenticated()
                                 .anyRequest().authenticated();
-
-
                     })
                     .csrf(csrf -> {
                         logger.debug("Disabling CSRF");
