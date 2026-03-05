@@ -48,7 +48,7 @@ public class AuthServiceImpl implements AuthService {
             if(user1 == null || !user1.isEmail_verified()){
                 throw new UserOperationException("Invalid credential");
             }
-          logger.info("authentication ");
+            logger.info("authentication ");
             Authentication authentication = authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(logInDto.getEmail(), logInDto.getPassword())
             );
